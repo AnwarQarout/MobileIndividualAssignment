@@ -162,8 +162,9 @@ public class MeasureActivity extends AppCompatActivity {
         String data = prefs.getString("data","");
         MeasureModel measureModel = gson.fromJson(data,MeasureModel.class);
 
+        String s = Integer.toString(measureModel.getWeight());
         System.out.println(measureModel.getWeight()+"...........");
-       editText.setText(measureModel.getWeight());
+       editText.setText(s);
 
         if(measureModel.getGender().equals("Male")){
             RadioButton radioButton = findViewById(R.id.maleRB);
